@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,7 +18,17 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
+
+
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    // เพิ่ม route อื่น ๆ ที่ต้องการ
+    Route::get('/admin/users', [AdminController::class, 'index'])->name('admin.users.index');
+    Route::post('/admin/users/search', [AdminController::class, 'search'])->name('admin.users.search');
+
+});
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/reports', [ReportController::class, 'index'])->name('admin.reports.index');
+    Route::post('/admin/reports/search', [ReportController::class, 'search'])->name('admin.reports.search');
+
 });
