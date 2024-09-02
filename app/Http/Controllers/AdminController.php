@@ -19,5 +19,11 @@ class AdminController extends Controller
         $users = User::where('email', 'like', '%' . $email . '%')->get();
         return view('admin.users', compact('users'));
     }
+    public function show($id)
+{
+    $user = User::findOrFail($id);
+    return response()->json($user);
+}
+
 }
 

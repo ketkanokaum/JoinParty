@@ -21,4 +21,10 @@ class ReportController extends Controller
                         ->get();
         return view('admin.reports', compact('reports'));
     }
+    public function show($id)
+{
+    $report = Report::findOrFail($id);
+    return response()->json($report);
+}
+
 }
