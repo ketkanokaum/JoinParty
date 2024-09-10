@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\parties;
+use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
 
@@ -45,6 +46,14 @@ class AdminController extends Controller
         $new_Party->save();
         $parties=parties::all();
         return view("admin.create",compact('parties'));
+    }
+
+
+    public function showUser(){
+        $users=DB::table('users')
+        ->select('id', 'name', 'email', 'created_at') 
+        ->get(); 
+        return view("admin.dashboard",compact('users'));
     }
 }
 
