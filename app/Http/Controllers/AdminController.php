@@ -5,10 +5,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\parties;
+use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
 
-  /*  public function checktype()
+/*  public function checktype()
     {
         if(Auth::id()){
 
@@ -46,6 +47,30 @@ class AdminController extends Controller
         $parties=parties::all();
         return view("admin.create",compact('parties'));
     }
+
+    public function showUsers(){
+        return view("admin.dashboard");
+    }
+
+    public function showUser(Request $rs){
+            function sort_db($column, $sort){
+                $rs =DB::table('users')
+                ->select('id','email','created_at')
+                ->orderby($column,$sort)
+                ->get();
+                return $rs;
+        }
+        if ($rs->sort == NULL || $rs->sort == "id asc") {
+            $users = sort_db('users', "id", 'asc');
+            $sort_by = 'id_lowToHigh';
+        } else if ($rs->sort == "email asc") {
+            $users = sort_db('users', "email", 'asc');
+            $sort_by = 'email_lowToHigh';
+    } else{
+            $users = sort_db('users', "created_at", 'asc');
+            $sort_by = 'created_at_lowToHigh';
+    }
+    return view("admin.dashboard",compact('users','sort_by'));
+    }
 }
-
-
+//

@@ -19,8 +19,8 @@ Route::middleware([
 });
 
 
-Route::get('/admin/dashboard', [AdminController::class, 'index']);
+//Route::get('/admin/dashboard', [AdminController::class, 'index']);
 Route::match(['get', 'post'], '/admin/create', [AdminController::class, 'createParty']);
 
-
+Route::get('/admin/dashboard', [AdminController::class, 'showUser']);
 

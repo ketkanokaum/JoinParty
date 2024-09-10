@@ -20,32 +20,27 @@
     </style>
 </head>
 <body>
-    Hello Admin
+
+    
     <table border="1">
     <thead>
         <tr>
-            <th >Party ID</th>
-            <th >date</th>
-            <th >party_name</th>
-            <th >location</th>
-            <th >details</th>
-            <th >participants</th>
+            <th >User ID</th>
+            <th >email</th>
+            <th >created dete</th>
             
         </tr>
     </thead>
     <tbody>
     <h2>Party</h2> 
-    @foreach($parties as $Parties)
+    @foreach($users as $user)
             <tr>
-            <td>{{$Parties->id}} </td> 
-            <td>{{$Parties->date}} </td> 
-            <td>{{$Parties->party_name}} </td> 
-            <td>{{$Parties->location}} </td> 
-            <td>{{$Parties->details}} </td> 
-            <td>{{$Parties->participants}} </td> 
+            <td>{{$user->id}} </td> 
+            <td>{{$user->email}} </td> 
+            <td>{{$user->created_at}} </td> 
             </tr>
-    @endforeach
-
+    @endforeach 
+    @dd($users)
     
 </body>
 </html>
