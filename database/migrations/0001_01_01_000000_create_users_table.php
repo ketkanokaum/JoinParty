@@ -20,6 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->boolean('is_admin')->default(false);
             $table->timestamps();
         });
 
@@ -37,10 +38,6 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('role')->default('user'); // หรือ $table->boolean('is_admin')->default(false);
-        });
-        
     }
 
     /**

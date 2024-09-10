@@ -10,10 +10,13 @@ class LoginController extends Controller
 {
     protected function authenticated(Request $request, $user)
     {
-        if ($user->role === 'admin') { // หรือ $user->is_admin === true;
-            return redirect('/admin/dashboard');
+        // ตรวจสอบว่าเป็น admin หรือไม่
+        if (Auth::user()->is_admin) {
+            // ผู้ใช้เป็น admin
+            return redirect()->route('admin.dashboard');
+        } else {
+            // ผู้ใช้ทั่วไป
+            return redirect()->route('user.dashboard');
         }
-
-        return redirect('/home');
     }
 }
