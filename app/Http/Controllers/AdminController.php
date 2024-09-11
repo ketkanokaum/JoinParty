@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
 
-  /*  public function checktype()
+/*  public function checktype()
     {
         if(Auth::id()){
 
@@ -56,5 +56,3 @@ class AdminController extends Controller
         return view("admin.dashboard",compact('users'));
     }
 }
-
-
