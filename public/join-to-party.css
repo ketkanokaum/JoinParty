@@ -1,0 +1,98 @@
+@font-face {
+    font-family: fontwin;
+    src: url(font/Mitr/Mitr-Light.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: fontwin, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(243, 218, 195, 0.637) 4%,rgba(98, 64, 190, 0.24) 90%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    align-items: center;
+}
+
+.logo {
+    width: 10%;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #e67e22;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+ul {
+    margin-top: 30px;
+}
+
+ul li {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.btn-success {
+    background-color: #ffd28c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.btn-outline-secondary {
+    background-color: #ffffff;
+    border: 0.5px solid #dfdfdf;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.btn-success:hover {
+    background-color: #e67e22;
+    color: white;
+}
+
+#favorite-icon {
+    color: #e62222;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#favorite-icon:hover {
+    transform: scale(1.2); 
+}
+
+#favorite-icon.bi-heart-fill {
+    transform: scale(1.2);
+}
+
+
+
+
+
