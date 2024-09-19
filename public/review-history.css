@@ -1,0 +1,76 @@
+@font-face {
+    font-family: fontwin;
+    src: url(font/Mitr/Mitr-Light.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: fontwin, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(243, 218, 195, 0.637) 4%, rgba(98, 64, 190, 0.24) 90%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+}
+
+.party-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.review-btn {
+    display: none;
+}
+
+.logo {
+    width: 10%;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #e67e22;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+ul {
+    margin-top: 30px;
+}
+
+ul li {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.rating {
+    color: #e67e22;
+}
