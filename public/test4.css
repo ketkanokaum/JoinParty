@@ -1,0 +1,53 @@
+@font-face {
+    font-family: fontwin;
+    src: url(font/Mitr/Mitr-Light.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: fontwin, sans-serif;
+}
+
+.btn-primary {
+    background: #ffd28c;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    color: white;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+ul li {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.btn-success,.btn-warning, .btn-secondary{
+    background: #ffd28c;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-disabled, #submit-btn {
+    background-color: #ffd28c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.btn-success:hover, .btn-warning:hover, .btn-secondary:hover {
+    background-color: #e67e22;
+    color: white;
+}
